@@ -15,7 +15,6 @@
 		C172EDBA25D5A73E003D0312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C172EDB925D5A73E003D0312 /* Assets.xcassets */; };
 		C172EDBD25D5A73E003D0312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C172EDBB25D5A73E003D0312 /* LaunchScreen.storyboard */; };
 		C172EDC825D5C247003D0312 /* RapidAPILocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C172EDC725D5C247003D0312 /* RapidAPILocator.swift */; };
-		C172EDCB25D5C2BB003D0312 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C172EDCA25D5C2BB003D0312 /* Secrets.swift */; };
 		C172EDCE25D5CA55003D0312 /* AirportLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C172EDCD25D5CA55003D0312 /* AirportLocator.swift */; };
 		C172EDD625D5DDD7003D0312 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C172EDD525D5DDD7003D0312 /* LocationManager.swift */; };
 		C172EDD925D63EF5003D0312 /* LufthansaLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C172EDD825D63EF5003D0312 /* LufthansaLocator.swift */; };
@@ -29,6 +28,7 @@
 		C19E5BF625D75F2E00766E15 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5BF525D75F2E00766E15 /* Airport.swift */; };
 		C19E5BFA25D76C5700766E15 /* ResultsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5BF925D76C5700766E15 /* ResultsTabBarController.swift */; };
 		C19E5BFD25D76EB700766E15 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5BFC25D76EB700766E15 /* ResultsViewController.swift */; };
+		C1B15E7B25D7BCDA0071D7B0 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B15E7A25D7BCDA0071D7B0 /* Secrets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,6 @@
 		C172EDBC25D5A73E003D0312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C172EDBE25D5A73E003D0312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C172EDC725D5C247003D0312 /* RapidAPILocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapidAPILocator.swift; sourceTree = "<group>"; };
-		C172EDCA25D5C2BB003D0312 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		C172EDCD25D5CA55003D0312 /* AirportLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportLocator.swift; sourceTree = "<group>"; };
 		C172EDD525D5DDD7003D0312 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C172EDD825D63EF5003D0312 /* LufthansaLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LufthansaLocator.swift; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		C19E5BF525D75F2E00766E15 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		C19E5BF925D76C5700766E15 /* ResultsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTabBarController.swift; sourceTree = "<group>"; };
 		C19E5BFC25D76EB700766E15 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		C1B15E7A25D7BCDA0071D7B0 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 				C172EDB925D5A73E003D0312 /* Assets.xcassets */,
 				C172EDBB25D5A73E003D0312 /* LaunchScreen.storyboard */,
 				C172EDBE25D5A73E003D0312 /* Info.plist */,
-				C172EDCA25D5C2BB003D0312 /* Secrets.swift */,
+				C1B15E7A25D7BCDA0071D7B0 /* Secrets.swift */,
 			);
 			path = "Airport Finder";
 			sourceTree = "<group>";
@@ -209,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1B15E7B25D7BCDA0071D7B0 /* Secrets.swift in Sources */,
 				C172EDDD25D642AD003D0312 /* LufthansaResponse.swift in Sources */,
 				C172EDCE25D5CA55003D0312 /* AirportLocator.swift in Sources */,
 				C19E5BEC25D6F3E000766E15 /* ResultsPresenter.swift in Sources */,
@@ -218,7 +219,6 @@
 				C172EDC825D5C247003D0312 /* RapidAPILocator.swift in Sources */,
 				C19E5BEF25D700EE00766E15 /* ResultsWireframe.swift in Sources */,
 				C11968D725D77A20001334A2 /* ResultsListController.swift in Sources */,
-				C172EDCB25D5C2BB003D0312 /* Secrets.swift in Sources */,
 				C172EDD925D63EF5003D0312 /* LufthansaLocator.swift in Sources */,
 				C19E5BF625D75F2E00766E15 /* Airport.swift in Sources */,
 				C172EDD625D5DDD7003D0312 /* LocationManager.swift in Sources */,

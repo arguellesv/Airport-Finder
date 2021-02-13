@@ -13,7 +13,7 @@ class RadiusSelectionController: UIViewController {
     @IBOutlet weak var radiusSlider: UISlider!
     @IBOutlet weak var searchButton: UIButton!
 
-    weak var eventHandler: RadiusPresenterToViewController! {
+    weak var eventHandler: RadiusPresenterToViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
