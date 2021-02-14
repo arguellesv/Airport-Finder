@@ -11,9 +11,6 @@
  - Renaming this struct to "Secrets".
  */
 struct SecretsSample {
-    static let rapidAPIKey: String = "RapidAPIKey"
-    static let rapidAPIHost: String = "RapidAPIHost"
-    
 //    static let LHClientID: String = <#LufthansaClientID#>
 //    static let LHClientSecret: String = <#LufthansaClientSecret#>
 }

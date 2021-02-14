@@ -14,7 +14,6 @@
 		C172EDB825D5A73A003D0312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C172EDB625D5A73A003D0312 /* Main.storyboard */; };
 		C172EDBA25D5A73E003D0312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C172EDB925D5A73E003D0312 /* Assets.xcassets */; };
 		C172EDBD25D5A73E003D0312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C172EDBB25D5A73E003D0312 /* LaunchScreen.storyboard */; };
-		C172EDC825D5C247003D0312 /* RapidAPILocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C172EDC725D5C247003D0312 /* RapidAPILocator.swift */; };
 		C172EDCE25D5CA55003D0312 /* AirportLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C172EDCD25D5CA55003D0312 /* AirportLocator.swift */; };
 		C172EDD625D5DDD7003D0312 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C172EDD525D5DDD7003D0312 /* LocationManager.swift */; };
 		C172EDD925D63EF5003D0312 /* LufthansaLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C172EDD825D63EF5003D0312 /* LufthansaLocator.swift */; };
@@ -46,7 +45,6 @@
 		C172EDB925D5A73E003D0312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C172EDBC25D5A73E003D0312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C172EDBE25D5A73E003D0312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C172EDC725D5C247003D0312 /* RapidAPILocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapidAPILocator.swift; sourceTree = "<group>"; };
 		C172EDCD25D5CA55003D0312 /* AirportLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportLocator.swift; sourceTree = "<group>"; };
 		C172EDD525D5DDD7003D0312 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C172EDD825D63EF5003D0312 /* LufthansaLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LufthansaLocator.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				C172EDD825D63EF5003D0312 /* LufthansaLocator.swift */,
-				C172EDC725D5C247003D0312 /* RapidAPILocator.swift */,
 				C19E5BF525D75F2E00766E15 /* Airport.swift */,
 				C1F74C8F25D8C16100B9647F /* AirportMarkerView.swift */,
 				C172EDDC25D642AD003D0312 /* LufthansaResponse.swift */,
@@ -265,7 +262,6 @@
 				C1F74C8625D8C0B700B9647F /* RadiusPresenterToViewController.swift in Sources */,
 				C19E5BFD25D76EB700766E15 /* ResultsViewController.swift in Sources */,
 				C1F74C9025D8C16100B9647F /* AirportMarkerView.swift in Sources */,
-				C172EDC825D5C247003D0312 /* RapidAPILocator.swift in Sources */,
 				C19E5BEF25D700EE00766E15 /* ResultsWireframe.swift in Sources */,
 				C1F74C8325D8BEAD00B9647F /* ResultsPresenterToInteractor.swift in Sources */,
 				C11968D725D77A20001334A2 /* ResultsListController.swift in Sources */,
