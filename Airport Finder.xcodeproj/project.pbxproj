@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C101F26925D8CFC800FFC64B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C101F26825D8CFC800FFC64B /* Location.swift */; };
 		C11968D725D77A20001334A2 /* ResultsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11968D625D77A20001334A2 /* ResultsListController.swift */; };
 		C172EDB125D5A73A003D0312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C172EDB025D5A73A003D0312 /* AppDelegate.swift */; };
 		C172EDB325D5A73A003D0312 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C172EDB225D5A73A003D0312 /* SceneDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C101F26825D8CFC800FFC64B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C11968D625D77A20001334A2 /* ResultsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsListController.swift; sourceTree = "<group>"; };
 		C172EDAD25D5A73A003D0312 /* Airport Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Airport Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C172EDB025D5A73A003D0312 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C101F26B25D8CFD400FFC64B /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				C172EDD525D5DDD7003D0312 /* LocationManager.swift */,
+				C101F26825D8CFC800FFC64B /* Location.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		C172EDA425D5A73A003D0312 = {
 			isa = PBXGroup;
 			children = (
@@ -100,11 +111,11 @@
 				C172EDB225D5A73A003D0312 /* SceneDelegate.swift */,
 				C172EDB625D5A73A003D0312 /* Main.storyboard */,
 				C19E5BE125D6774700766E15 /* Interactor.swift */,
-				C172EDD525D5DDD7003D0312 /* LocationManager.swift */,
 				C172EDBE25D5A73E003D0312 /* Info.plist */,
 				C19E5BF825D76C1C00766E15 /* Results */,
 				C19E5BE525D6F0C800766E15 /* RadiusSelection */,
 				C172EDDB25D6427F003D0312 /* Networking */,
+				C101F26B25D8CFD400FFC64B /* Location */,
 				C1F74C9525D8C22400B9647F /* Support */,
 			);
 			path = "Airport Finder";
@@ -263,6 +274,7 @@
 				C19E5BFD25D76EB700766E15 /* ResultsViewController.swift in Sources */,
 				C1F74C9025D8C16100B9647F /* AirportMarkerView.swift in Sources */,
 				C19E5BEF25D700EE00766E15 /* ResultsWireframe.swift in Sources */,
+				C101F26925D8CFC800FFC64B /* Location.swift in Sources */,
 				C1F74C8325D8BEAD00B9647F /* ResultsPresenterToInteractor.swift in Sources */,
 				C11968D725D77A20001334A2 /* ResultsListController.swift in Sources */,
 				C172EDD925D63EF5003D0312 /* LufthansaLocator.swift in Sources */,
@@ -352,7 +364,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -407,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
