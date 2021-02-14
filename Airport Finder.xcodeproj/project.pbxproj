@@ -29,6 +29,11 @@
 		C19E5BFA25D76C5700766E15 /* ResultsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5BF925D76C5700766E15 /* ResultsTabBarController.swift */; };
 		C19E5BFD25D76EB700766E15 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E5BFC25D76EB700766E15 /* ResultsViewController.swift */; };
 		C1B15E7B25D7BCDA0071D7B0 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B15E7A25D7BCDA0071D7B0 /* Secrets.swift */; };
+		C1B15E7F25D7BFED0071D7B0 /* SecretsSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B15E7E25D7BFED0071D7B0 /* SecretsSample.swift */; };
+		C1F74C8325D8BEAD00B9647F /* ResultsPresenterToInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F74C8225D8BEAD00B9647F /* ResultsPresenterToInteractor.swift */; };
+		C1F74C8625D8C0B700B9647F /* RadiusPresenterToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F74C8525D8C0B700B9647F /* RadiusPresenterToViewController.swift */; };
+		C1F74C8925D8C0D700B9647F /* RadiusPresenterToInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F74C8825D8C0D700B9647F /* RadiusPresenterToInteractor.swift */; };
+		C1F74C9025D8C16100B9647F /* AirportMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F74C8F25D8C16100B9647F /* AirportMarkerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +61,11 @@
 		C19E5BF925D76C5700766E15 /* ResultsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTabBarController.swift; sourceTree = "<group>"; };
 		C19E5BFC25D76EB700766E15 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		C1B15E7A25D7BCDA0071D7B0 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		C1B15E7E25D7BFED0071D7B0 /* SecretsSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretsSample.swift; sourceTree = "<group>"; };
+		C1F74C8225D8BEAD00B9647F /* ResultsPresenterToInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenterToInteractor.swift; sourceTree = "<group>"; };
+		C1F74C8525D8C0B700B9647F /* RadiusPresenterToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusPresenterToViewController.swift; sourceTree = "<group>"; };
+		C1F74C8825D8C0D700B9647F /* RadiusPresenterToInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusPresenterToInteractor.swift; sourceTree = "<group>"; };
+		C1F74C8F25D8C16100B9647F /* AirportMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportMarkerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,16 +100,14 @@
 			children = (
 				C172EDB025D5A73A003D0312 /* AppDelegate.swift */,
 				C172EDB225D5A73A003D0312 /* SceneDelegate.swift */,
+				C172EDB625D5A73A003D0312 /* Main.storyboard */,
 				C19E5BE125D6774700766E15 /* Interactor.swift */,
+				C172EDD525D5DDD7003D0312 /* LocationManager.swift */,
+				C172EDBE25D5A73E003D0312 /* Info.plist */,
 				C19E5BF825D76C1C00766E15 /* Results */,
 				C19E5BE525D6F0C800766E15 /* RadiusSelection */,
 				C172EDDB25D6427F003D0312 /* Networking */,
-				C172EDD525D5DDD7003D0312 /* LocationManager.swift */,
-				C172EDB625D5A73A003D0312 /* Main.storyboard */,
-				C172EDB925D5A73E003D0312 /* Assets.xcassets */,
-				C172EDBB25D5A73E003D0312 /* LaunchScreen.storyboard */,
-				C172EDBE25D5A73E003D0312 /* Info.plist */,
-				C1B15E7A25D7BCDA0071D7B0 /* Secrets.swift */,
+				C1F74C9525D8C22400B9647F /* Support */,
 			);
 			path = "Airport Finder";
 			sourceTree = "<group>";
@@ -107,11 +115,12 @@
 		C172EDDB25D6427F003D0312 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				C172EDCD25D5CA55003D0312 /* AirportLocator.swift */,
 				C172EDD825D63EF5003D0312 /* LufthansaLocator.swift */,
-				C19E5BF525D75F2E00766E15 /* Airport.swift */,
-				C172EDDC25D642AD003D0312 /* LufthansaResponse.swift */,
 				C172EDC725D5C247003D0312 /* RapidAPILocator.swift */,
+				C19E5BF525D75F2E00766E15 /* Airport.swift */,
+				C1F74C8F25D8C16100B9647F /* AirportMarkerView.swift */,
+				C172EDDC25D642AD003D0312 /* LufthansaResponse.swift */,
+				C1F74C9325D8C1E200B9647F /* Protocols */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -122,6 +131,7 @@
 				C172EDB425D5A73A003D0312 /* RadiusSelectionController.swift */,
 				C19E5BDE25D66F7D00766E15 /* RadiusSelectionPresenter.swift */,
 				C19E5BF125D7181000766E15 /* RadiusSelectionWireframe.swift */,
+				C1F74C8C25D8C11800B9647F /* Protocols */,
 			);
 			path = RadiusSelection;
 			sourceTree = "<group>";
@@ -134,9 +144,46 @@
 				C11968D625D77A20001334A2 /* ResultsListController.swift */,
 				C19E5BEB25D6F3E000766E15 /* ResultsPresenter.swift */,
 				C19E5BEE25D700EE00766E15 /* ResultsWireframe.swift */,
-				C19E5BFC25D76EB700766E15 /* ResultsViewController.swift */,
+				C1F74C8D25D8C13F00B9647F /* Protocols */,
 			);
 			path = Results;
+			sourceTree = "<group>";
+		};
+		C1F74C8C25D8C11800B9647F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C1F74C8825D8C0D700B9647F /* RadiusPresenterToInteractor.swift */,
+				C1F74C8525D8C0B700B9647F /* RadiusPresenterToViewController.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C1F74C8D25D8C13F00B9647F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C19E5BFC25D76EB700766E15 /* ResultsViewController.swift */,
+				C1F74C8225D8BEAD00B9647F /* ResultsPresenterToInteractor.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C1F74C9325D8C1E200B9647F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C172EDCD25D5CA55003D0312 /* AirportLocator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C1F74C9525D8C22400B9647F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C172EDB925D5A73E003D0312 /* Assets.xcassets */,
+				C172EDBB25D5A73E003D0312 /* LaunchScreen.storyboard */,
+				C1B15E7A25D7BCDA0071D7B0 /* Secrets.swift */,
+				C1B15E7E25D7BFED0071D7B0 /* SecretsSample.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,13 +262,18 @@
 				C19E5BEC25D6F3E000766E15 /* ResultsPresenter.swift in Sources */,
 				C19E5BE225D6774700766E15 /* Interactor.swift in Sources */,
 				C19E5BF225D7181000766E15 /* RadiusSelectionWireframe.swift in Sources */,
+				C1F74C8625D8C0B700B9647F /* RadiusPresenterToViewController.swift in Sources */,
 				C19E5BFD25D76EB700766E15 /* ResultsViewController.swift in Sources */,
+				C1F74C9025D8C16100B9647F /* AirportMarkerView.swift in Sources */,
 				C172EDC825D5C247003D0312 /* RapidAPILocator.swift in Sources */,
 				C19E5BEF25D700EE00766E15 /* ResultsWireframe.swift in Sources */,
+				C1F74C8325D8BEAD00B9647F /* ResultsPresenterToInteractor.swift in Sources */,
 				C11968D725D77A20001334A2 /* ResultsListController.swift in Sources */,
 				C172EDD925D63EF5003D0312 /* LufthansaLocator.swift in Sources */,
 				C19E5BF625D75F2E00766E15 /* Airport.swift in Sources */,
+				C1F74C8925D8C0D700B9647F /* RadiusPresenterToInteractor.swift in Sources */,
 				C172EDD625D5DDD7003D0312 /* LocationManager.swift in Sources */,
+				C1B15E7F25D7BFED0071D7B0 /* SecretsSample.swift in Sources */,
 				C172EDB525D5A73A003D0312 /* RadiusSelectionController.swift in Sources */,
 				C19E5BDF25D66F7D00766E15 /* RadiusSelectionPresenter.swift in Sources */,
 				C19E5BE925D6F1F000766E15 /* ResultsMapController.swift in Sources */,
@@ -384,7 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.perroscongatos.Airport-Finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -403,7 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.perroscongatos.Airport-Finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

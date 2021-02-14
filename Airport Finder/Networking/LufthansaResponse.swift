@@ -3,6 +3,10 @@
 //
 //   let lHResponseBody = try? newJSONDecoder().decode(LHResponseBody.self, from: jsonData)
 
+//
+// Support types for decoding JSON responses from Lufthansa's API.
+//
+
 import Foundation
 
 // MARK: - LHResponseBody

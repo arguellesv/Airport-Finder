@@ -28,6 +28,8 @@ class RadiusSelectionController: UIViewController {
         self.radiusSlider.setValue(Float(radius),
                                    animated: false)
         self.radiusLabel.text = "\(radius)"
+        
+        searchButton.layer.cornerRadius = searchButton.frame.width/20
     }
     
     // MARK: - IBActions

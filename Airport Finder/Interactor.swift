@@ -36,8 +36,6 @@ class Interactor {
         self.radiusPresenter = radiusSelectionPresenter
         radiusPresenter?.radiusDidUpdate(to: self.radius)
     }
-    
-    
 }
 
 // MARK: - Interface to RadiusSelectionPresenter
@@ -47,19 +45,9 @@ extension Interactor {
     }
     
     func beginSearch() {
-        print("Searching for airports within a radius of \(radius) km")
-        
         self.locationManager = LocationManager()
         locationManager?.interactor = self
         locationManager?.getCurrentLocation()
-        
-        // FIXME: LM should manually notify us when a location is found,
-        // and then we won't need to subscribe here.
-        //        locationManager.$currentLocation
-        //            .sink(receiveValue: { (location) in
-        //                self.locationDidUpdate(location: location)
-        //            })
-        //            .store(in: &subscriptions)
     }
 }
 
@@ -80,15 +68,16 @@ extension Interactor {
     
     func locationDidFailToUpdate(withError error: Error) {
         // TODO: Handle errors
-        // If the problem is lack of authorization, inform the user and ask them to turn on location services for the app.
+        // If the problem is lack of authorization, inform the user
+        // and ask them to turn on location services for the app.
         // Otherwise, try again by ourselves, or tell the user to try again later.
+        print("Error finding the user's location: \(error.localizedDescription)\n\n\(error)")
     }
 }
 
 // MARK: - Interface to AirportLocator
 extension Interactor: InteractorToAirportLocator {
     func didUpdateAirportResults(_ results: [Airport]) {
-        // TODO: Pass results to ResultsPresenter
         print("Found \(results.count) airports nearby.")
         self.airports = results
         resultsPresenter?.updateResults(with: results)

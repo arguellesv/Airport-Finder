@@ -7,16 +7,11 @@
 
 import Foundation
 
-protocol ResultsPresenterToInteractor {
-    func updateResults(with airports: [Airport])
-}
-
 class ResultsPresenter {
     var resultsWireframe: ResultsWireframe!
     var interactor: Interactor
     
     weak var viewController: ResultsViewController!
-    //    let listView: ListResultsView
     
     init(with interactor: Interactor) {
         self.interactor = interactor

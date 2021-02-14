@@ -13,8 +13,8 @@ class ResultsListController: UIViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Airport>
     typealias CellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Airport>
     
-    var collectionView: UICollectionView!
-    var dataSource: DataSource!
+    private var collectionView: UICollectionView!
+    private var dataSource: DataSource!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,20 +22,34 @@ class ResultsListController: UIViewController {
         // Do any additional setup after loading the view.
         configure()
     }
-    
-    private func configure() {
-        view.backgroundColor = .systemFill
-        
-        setupCollectionView()
-        setupTabBar()
-        presenter?.configureViewControllerAfterLoad()
+}
+
+// MARK: - ResultsViewController methods
+extension ResultsListController: ResultsViewController {
+    func updateResults(with airports: [Airport]) {
+        updateSnapshot(with: airports, animated: true)
     }
     
-    func setupTabBar() {
-        let tabBarItem = UITabBarItem(title: "",
-                                      image: UIImage(systemName: "list.bullet"),
-                                      tag: 1)
-        self.tabBarItem = tabBarItem
+    func setUserLocation(to: Location) { }
+    
+    func configure(withRadius: Int, location: Location, airports: [Airport]) {
+        updateSnapshot(with: airports, animated: true)
+    }
+}
+// MARK: - View Setup
+extension ResultsListController {
+    private func configure() {
+        view.backgroundColor = .systemFill
+        self.title = "Nearby Airports"
+        
+        let tabItem = UITabBarItem(title: "List",
+                                  image: UIImage(systemName: "list.bullet"),
+                                  tag: 1)
+        self.tabBarItem = tabItem
+        self.navigationController?.tabBarItem = tabItem
+        
+        setupCollectionView()
+        presenter?.configureViewControllerAfterLoad()
     }
     
     private func setupCollectionView() {
@@ -45,8 +59,6 @@ class ResultsListController: UIViewController {
         collectionView.backgroundColor = .systemBackground
         
         dataSource = setupDataSource(collectionView: collectionView)
-        //        collectionView.dataSource = dataSource
-        self.collectionView = collectionView
         
         view.addSubview(collectionView)
         view.topAnchor.constraint(equalTo: collectionView.topAnchor).isActive = true
@@ -54,10 +66,13 @@ class ResultsListController: UIViewController {
         view.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor).isActive = true
         view.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor).isActive = true
         
-        reloadData(with: [], animated: false)
+        self.collectionView = collectionView
+        updateSnapshot(with: [], animated: false)
     }
     
-    private func reloadData(with results: [Airport], animated: Bool = true) {
+    
+    // Called when new data is available
+    private func updateSnapshot(with results: [Airport], animated: Bool = true) {
         guard let dataSource = dataSource else { return }
         dataSource.apply(snapshot(from: results), animatingDifferences: animated)
     }
@@ -71,12 +86,12 @@ class ResultsListController: UIViewController {
     }
     
     private func createLayout() -> UICollectionViewLayout {
-        let configuration = UICollectionLayoutListConfiguration(appearance: .plain)
+        let configuration = UICollectionLayoutListConfiguration(appearance: .grouped)
         let layout = UICollectionViewCompositionalLayout.list(using: configuration)
         return layout
     }
     
-    func setupDataSource(collectionView: UICollectionView) -> DataSource {
+    private func setupDataSource(collectionView: UICollectionView) -> DataSource {
         let cellRegistration = createCellRegistration()
         
         let dataSource: DataSource = .init(collectionView: collectionView) { (collectionView, indexPath, airport) -> UICollectionViewCell? in
@@ -89,7 +104,7 @@ class ResultsListController: UIViewController {
         return dataSource
     }
     
-    func createCellRegistration() -> CellRegistration {
+    private func createCellRegistration() -> CellRegistration {
         let registration = CellRegistration { (cell, indexPath, airport) in
             var configuration = cell.defaultContentConfiguration()
             configuration.text = airport.title
@@ -103,17 +118,5 @@ class ResultsListController: UIViewController {
     
     enum Section {
         case main
-    }
-}
-
-extension ResultsListController: ResultsViewController {
-    func updateResults(with airports: [Airport]) {
-        reloadData(with: airports, animated: true)
-    }
-    
-    func setUserLocation(to: Location) { }
-    
-    func configure(withRadius: Int, location: Location, airports: [Airport]) {
-        reloadData(with: airports, animated: true)
     }
 }

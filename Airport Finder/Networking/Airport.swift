@@ -44,12 +44,3 @@ class Airport: NSObject, MKAnnotation {
     }
     
 }
-
-class AirportMarkerView: MKMarkerAnnotationView {
-    override var annotation: MKAnnotation? {
-        willSet {
-            canShowCallout = true
-            glyphImage = UIImage(systemName: "airplane.circle")
-        }
-    }
-}

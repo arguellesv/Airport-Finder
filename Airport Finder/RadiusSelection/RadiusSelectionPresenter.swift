@@ -8,18 +8,6 @@
 import Foundation
 import Combine
 
-// Protocols for interfacing with other components
-protocol RadiusPresenterToViewController: class {
-    func configureView()
-    func updateRadius(to: Float)
-    func beginSearch()
-}
-
-protocol RadiusPresenterToInteractor: class {
-    func radiusDidUpdate(to: Int)
-    func didRetrieveUserLocation(_:Location)
-}
-
 class RadiusSelectionPresenter {
     private weak var interactor: Interactor!
 //    private weak var radiusSelectionWireframe: RadiusSelectionWireframe?
@@ -61,6 +49,7 @@ extension RadiusSelectionPresenter: RadiusPresenterToViewController {
     
     func beginSearch() {
         interactor.beginSearch()
+        // TODO: Switch the search button (or at least the text) to a UIProgressView
     }
 }
 
