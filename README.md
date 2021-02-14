@@ -5,6 +5,20 @@ A test iOS App to find airports near your location.
 This app prompts the user to select a radius (in km), and then finds up to five nearby airports within that radius. 
 It uses the device's location as a starting point.
 
+## Screenshots
+<table>
+  <tr>
+    <th>Radius selection</th>
+    <th>Results in a `MKMapView`</th>
+    <th>Results in a `UICollectionView` with the List layout</th>
+  </tr>
+  <tr>
+    <td><img src="/Screenshots/RadiusScreen.png" alt="Radius selection view"></td>
+    <td><img src="/Screenshots/ResultsMapView.png" alt="Results map view"></td>
+    <td><img src="/Screenshots/ResultsListView.png" alt="Results list view"></td>
+  </tr>
+</table>
+
 ## Running the app
 Running the app requires setting API secrets from Lufthansa's API in a `Secrets` struct where Xcode can find it. You can, for example:
 
