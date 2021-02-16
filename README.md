@@ -9,8 +9,8 @@ It uses the device's location as a starting point.
 <table>
   <tr>
     <th>Radius selection</th>
-    <th>Results in a `MKMapView`</th>
-    <th>Results in a `UICollectionView` with the List layout</th>
+    <th>Results in an <code>MKMapView</code></th>
+    <th>Results in a <code>UICollectionView</code> with the List layout</th>
   </tr>
   <tr>
     <td><img src="/Screenshots/RadiusScreen.png" alt="Radius selection view"></td>
